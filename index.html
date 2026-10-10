@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zintax Store | POS &amp; Technology Store</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-content">
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+923390019568">+92 339 0019568</a>
+            </div>
+            <div>Free Delivery on Selected Orders</div>
+            <div class="top-links">
+                <a href="#contact">Track Order</a>
+                <a href="#contact">Help</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-main">
+
+            <a href="index.html" class="logo">
+                <img src="WhatsApp Image 2026-09-02 at 4.53.37 PM (1).jpeg" alt="Zintax Software">
+            </a>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+                <button type="button" id="searchBtn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="header-actions">
+                <a href="#" class="account">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Login <small>Account</small></span>
+                </a>
+
+                <button type="button" class="cart-btn" id="cartBtn" aria-label="Open cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart <small id="cartTotalSmall">Rs. 0</small></span>
+                    <b id="cartCount">0</b>
+                </button>
+            </div>
+
+            <button type="button" class="mobile-menu" id="mobileMenu" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+            <div class="container nav-inner">
+
+                <button type="button" class="category-btn" id="categoryBtn" aria-expanded="false"
+                    aria-controls="categoryMenu">
+                    <i class="fa-solid fa-bars"></i>
+                    All Categories
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="products.html">Shop</a>
+                    <a href="#new-arrivals">New Arrivals</a>
+                    <a href="#best-sellers">Best Sellers</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="nav-offer">
+                    <i class="fa-solid fa-bolt"></i>
+                    Special Offers
+                </div>
+            </div>
+        </nav>
+
+        <!-- CATEGORY MENU -->
+        <div class="category-menu" id="categoryMenu">
+            <div class="container category-menu-grid">
+
+                <div class="category-column">
+                    <h3>POS &amp; Retail</h3>
+                    <a href="products.html?category=pos" data-category="pos">POS Machines</a>
+                    <a href="products.html?category=printer" data-category="printer">Thermal Printers</a>
+                    <a href="products.html?category=barcode-printer" data-category="barcode-printer">Barcode
+                        Printers</a>
+                    <a href="products.html?category=scanner" data-category="scanner">Barcode Scanners</a>
+                    <a href="products.html?category=cash-drawer" data-category="cash-drawer">Cash Drawers</a>
+                    <a href="products.html?category=scale" data-category="scale">Weighing Scales</a>
+                </div>
+
+                <div class="category-column">
+                    <h3>Business</h3>
+                    <a href="products.html?category=software" data-category="software">Business Software</a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+                    <div class="hero-tag">
+                        <i class="fa-solid fa-star"></i>
+                        ZINTAX TECHNOLOGY STORE
+                    </div>
+
+                    <h1>
+                        Smart Technology
+                        <span>For Smart Business</span>
+                    </h1>
+
+                    <p>
+                        Explore premium POS systems, thermal printers,
+                        barcode scanners, accessories and business
+                        technology solutions.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="products.html" class="btn-primary">
+                            Shop Now
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#categories" class="btn-outline" data-open-categories>Explore Categories</a>
+                    </div>
+
+                    <div class="hero-features">
+                        <div><i class="fa-solid fa-truck-fast"></i><span>Fast Delivery</span></div>
+                        <div><i class="fa-solid fa-shield-halved"></i><span>Secure Shopping</span></div>
+                        <div><i class="fa-solid fa-headset"></i><span>Support</span></div>
+                    </div>
+                </div>
+
+                <div class="hero-product">
+                    <div class="hero-circle"></div>
+                    <div class="hero-product-card">
+                        <span class="sale-badge">SALE</span>
+                        <img src="ppos.jpg" alt="Professional POS System">
+                        <div class="hero-product-info">
+                            <small>Featured Product</small>
+                            <h3>Professional POS System</h3>
+                            <strong>Rs. 85,000</strong>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <div class="container about-grid">
+
+                <div class="about-content">
+                    <span class="section-label">ABOUT ZINTAX</span>
+                    <h2>Technology That <span>Moves Business Forward</span></h2>
+
+                    <p>
+                        Zintax Software provides modern technology
+                        solutions for businesses. From POS systems
+                        and barcode hardware to business software,
+                        we help businesses work smarter.
+                    </p>
+
+                    <p>
+                        Our goal is to provide reliable products,
+                        professional support and technology solutions
+                        that make everyday business operations easier.
+                    </p>
+
+                    <div class="about-points">
+                        <div><i class="fa-solid fa-circle-check"></i>Quality Products</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Competitive Prices</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Fast Delivery</div>
+                        <div><i class="fa-solid fa-circle-check"></i>Professional Support</div>
+                    </div>
+                </div>
+
+                <div class="about-box">
+                    <div>
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <strong>100+</strong>
+                        <span>Technology Products</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-users"></i>
+                        <strong>1000+</strong>
+                        <span>Happy Customers</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <strong>Pakistan</strong>
+                        <span>Nationwide Delivery</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-headset"></i>
+                        <strong>24/7</strong>
+                        <span>Customer Support</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FEATURES STRIP (id="categories" so the "Explore Categories" link works) -->
+        <section class="feature-strip" id="categories">
+            <div class="container feature-strip-grid">
+
+                <div class="strip-item">
+                    <i class="fa-solid fa-truck"></i>
+                    <div><strong>Fast Delivery</strong><span>Across Pakistan</span></div>
+                </div>
+
+                <div class="strip-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div><strong>Secure Payment</strong><span>100% Secure</span></div>
+                </div>
+
+                <div class="strip-item">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <div><strong>Easy Replacement</strong><span>Customer Friendly</span></div>
+                </div>
+
+                <div class="strip-item">
+                    <i class="fa-solid fa-headset"></i>
+                    <div><strong>Customer Support</strong><span>We're Here To Help</span></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NEW ARRIVALS -->
+        <section class="new-arrivals" id="new-arrivals">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">NEW PRODUCTS</span>
+                        <h2>New Arrivals</h2>
+                    </div>
+                    <a href="products.html" class="view-all-btn">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="new-arrivals-slider">
+                    <button type="button" class="new-arrivals-arrow" id="newArrivalsPrev" aria-label="Previous"><i
+                            class="fa-solid fa-chevron-left"></i></button>
+
+                    <div class="new-arrivals-viewport">
+                        <div class="new-arrivals-track" id="newArrivalsTrack">
+                            <a href="products.html?category=barcode-printer" class="new-arrival-product">
+                                <span class="product-badge">NEW</span>
+                                <div class="new-arrival-image"><img src="bp11.jpg" alt="Barcode Printer"></div>
+                                <div class="product-info">
+                                    <h3>Barcode Printer</h3>
+                                    <p>POS &amp; Retail</p>
+                                    <div class="product-bottom">
+                                        <span class="view-product"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="products.html?category=pos" class="new-arrival-product">
+                                <span class="product-badge">NEW</span>
+                                <div class="new-arrival-image"><img src="tc1.jpg" alt="POS Machine"></div>
+                                <div class="product-info">
+                                    <h3>POS Machine</h3>
+                                    <p>POS &amp; Retail</p>
+                                    <div class="product-bottom">
+                                        <span class="view-product"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="products.html?category=cash-drawer" class="new-arrival-product">
+                                <span class="product-badge">NEW</span>
+                                <div class="new-arrival-image"><img src="cd1.jpg" alt="Cash Drawer"></div>
+                                <div class="product-info">
+                                    <h3>Cash Drawer</h3>
+                                    <p>POS &amp; Retail</p>
+                                    <div class="product-bottom">
+                                        <span class="view-product"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="products.html?category=printer" class="new-arrival-product">
+                                <span class="product-badge">NEW</span>
+                                <div class="new-arrival-image"><img src="tp11.jpg" alt="Thermal Printer"></div>
+                                <div class="product-info">
+                                    <h3>Thermal Printer</h3>
+                                    <p>POS &amp; Retail</p>
+                                    <div class="product-bottom">
+                                        <span class="view-product"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="products.html?category=scanner" class="new-arrival-product">
+                                <span class="product-badge">NEW</span>
+                                <div class="new-arrival-image"><img src="bs11.jpg" alt="Barcode Scanner"></div>
+                                <div class="product-info">
+                                    <h3>Barcode Scanner</h3>
+                                    <p>POS &amp; Retail</p>
+                                    <div class="product-bottom">
+                                        <span class="view-product"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <button type="button" class="new-arrivals-arrow" id="newArrivalsNext" aria-label="Next"><i
+                            class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BEST SELLERS -->
+        <section class="featured-products" id="best-sellers">
+            <div class="container">
+
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">CUSTOMER FAVORITES</span>
+                        <h2>Best Sellers</h2>
+                        <p>Our most popular products trusted by customers.</p>
+                    </div>
+                    <a href="products.html" class="view-all-btn">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="featured-slider">
+                    <button type="button" class="slider-arrow" id="sliderPrev" aria-label="Previous"><i
+                            class="fa-solid fa-chevron-left"></i></button>
+
+                    <div class="slider-viewport">
+                        <div class="slider-track" id="sliderTrack">
+                            <a href="products.html?category=pos" class="slider-product">
+                                <span class="product-badge best">BEST SELLER</span>
+                                <div class="slider-image"><img src="apt.jpg" alt="POS Machine"></div>
+                                <div class="product-info">
+                                    <h3>POS Machine</h3>
+                                    <p>POS &amp; Retail</p>
+                                    <div class="product-bottom">
+                                        <span class="view-product"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="products.html?category=barcode-printer" class="slider-product">
+                                <span class="product-badge best">BEST SELLER</span>
+                                <div class="slider-image"><img src="bcp33.jpg" alt="Barcode Printer"></div>
+                                <div class="product-info">
+                                    <h3>Barcode Printer</h3>
+                                    <p>POS &amp; Retail</p>
+                                    <div class="product-bottom">
+                                        <span class="view-product"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="products.html?category=cash-drawer" class="slider-product">
+                                <span class="product-badge best">BEST SELLER</span>
+                                <div class="slider-image"><img src="cd1.jpg" alt="Cash Drawer"></div>
+                                <div class="product-info">
+                                    <h3>Cash Drawer</h3>
+                                    <p>POS &amp; Retail</p>
+                                    <div class="product-bottom">
+                                        <span class="view-product"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="products.html?category=printer" class="slider-product">
+                                <span class="product-badge best">BEST SELLER</span>
+                                <div class="slider-image"><img src="tp1.jpg" alt="Thermal Printer"></div>
+                                <div class="product-info">
+                                    <h3>Thermal Printer</h3>
+                                    <p>POS &amp; Retail</p>
+                                    <div class="product-bottom">
+                                        <span class="view-product"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="products.html?category=barcode-printer" class="slider-product">
+                                <span class="product-badge best">BEST SELLER</span>
+                                <div class="slider-image"><img src="bcp11.jpg" alt="Barcode Printer"></div>
+                                <div class="product-info">
+                                    <h3>Barcode Printer</h3>
+                                    <p>POS &amp; Retail</p>
+                                    <div class="product-bottom">
+                                        <span class="view-product"><i class="fa-solid fa-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <button type="button" class="slider-arrow" id="sliderNext" aria-label="Next"><i
+                            class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+            <div class="container newsletter-inner">
+
+                <div>
+                    <i class="fa-regular fa-envelope"></i>
+                    <div>
+                        <h3>Subscribe To Our Newsletter</h3>
+                        <p>Get updates about new products and special offers.</p>
+                    </div>
+                </div>
+
+                <form id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+                <a href="index.html" class="footer-logo">
+                    <img src="WhatsApp Image 2026-09-02 at 4.53.37 PM (1).jpeg" alt="Zintax Software">
+                </a>
+
+                <p>
+                    Zintax Software is your technology partner
+                    for POS systems, hardware, software and
+                    digital business solutions.
+                </p>
+
+                <div class="social">
+                    <a href="https://www.facebook.com/profile.php?id=61590912303466" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/zintaxsoftware/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/923390019568" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="#categories" data-open-categories>Categories</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div>
+                <h3>Categories</h3>
+                <a href="products.html?category=pos">POS Systems</a>
+                <a href="products.html?category=printer">Thermal Printers</a>
+                <a href="products.html?category=scanner">Barcode Scanners</a>
+                <a href="products.html?category=cash-drawer">Cash Drawers</a>
+                <a href="products.html">Accessories</a>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+
+                <p class="footer-contact">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Punjab Tower, 2nd Floor, Office No. 2, Near MCB Bank, Gohad Pur Rd, Sialkot, Pakistan</span>
+                </p>
+
+                <p class="footer-contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+923390019568">+92 339 0019568</a>
+                </p>
+
+                <p class="footer-contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:zintaxsoftwarehouse@gmail.com">zintaxsoftwarehouse@gmail.com</a>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 Zintax Software House. All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- CART -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+            <h2>
+                Shopping Cart
+                <span id="cartHeaderCount">0</span>
+            </h2>
+            <button type="button" id="closeCart" aria-label="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>Your cart is empty</h3>
+                <p>Add products to your cart.</p>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Subtotal</span>
+                <strong id="drawerTotal">Rs. 0</strong>
+            </div>
+
+            <button type="button" class="checkout-btn" id="checkoutBtn">
+                Proceed To Checkout
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <button type="button" class="whatsapp-order" id="whatsappOrder">
+                <i class="fa-brands fa-whatsapp"></i>
+                Order On WhatsApp
+            </button>
+        </div>
+
+    </aside>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-check"></i>
+        <span>Product added to cart</span>
+    </div>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/923390019568" target="_blank" rel="noopener noreferrer" class="floating-whatsapp"
+        aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        /* =========================================================
+           ZINTAX STORE - script.js
+           ========================================================= */
+        (function () {
+            'use strict';
+            console.log('Zintax script loaded');
+
+            const $ = (s, r = document) => r.querySelector(s);
+            const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+            const WHATSAPP = '923390019568';
+            const CART_KEY = 'zintaxCart';
+
+            /* ---------------- Toast ---------------- */
+            const toast = $('#toast');
+            let toastTimer;
+            function showToast(message, icon) {
+                if (!toast) return;
+                $('span', toast).textContent = message;
+                const i = $('i', toast);
+                if (i) i.className = icon || 'fa-solid fa-check';
+                toast.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+            }
+
+            /* ---------------- Category menu ---------------- */
+            const categoryBtn = $('#categoryBtn');
+            const categoryMenu = $('#categoryMenu');
+            const chevron = categoryBtn ? $('.fa-chevron-down', categoryBtn) : null;
+
+            function setCategoryMenu(open) {
+                if (!categoryBtn || !categoryMenu) return;
+                categoryMenu.classList.toggle('show', open);
+                categoryBtn.classList.toggle('active', open);
+                categoryBtn.setAttribute('aria-expanded', String(open));
+                if (chevron) chevron.classList.toggle('rotate', open);
+            }
+
+            if (categoryBtn && categoryMenu) {
+                categoryBtn.addEventListener('click', e => {
+                    e.stopPropagation();
+                    setCategoryMenu(!categoryMenu.classList.contains('show'));
+                });
+
+                // close when clicking a link inside the menu
+                $$('a', categoryMenu).forEach(a => a.addEventListener('click', () => setCategoryMenu(false)));
+
+                // close on outside click
+                document.addEventListener('click', e => {
+                    if (!categoryMenu.classList.contains('show')) return;
+                    if (!categoryMenu.contains(e.target) && !categoryBtn.contains(e.target)) setCategoryMenu(false);
+                });
+            }
+
+            // "Explore Categories" / footer "Categories" open the menu
+            $$('[data-open-categories]').forEach(el => {
+                el.addEventListener('click', e => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    const nav = $('.navigation');
+                    if (nav && window.innerWidth <= 768) nav.classList.add('mobile-open');
+                    setTimeout(() => setCategoryMenu(true), 250);
+                });
+            });
+
+            /* ---------------- Mobile menu ---------------- */
+            const mobileMenu = $('#mobileMenu');
+            const navigation = $('.navigation');
+
+            if (mobileMenu && navigation) {
+                mobileMenu.addEventListener('click', () => {
+                    const open = navigation.classList.toggle('mobile-open');
+                    mobileMenu.classList.toggle('active', open);
+                    const icon = $('i', mobileMenu);
+                    if (icon) icon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+                    if (!open) setCategoryMenu(false);
+                });
+
+                $$('.nav-links a').forEach(a => a.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) mobileMenu.click();
+                }));
+            }
+
+            /* ---------------- Search ---------------- */
+            const searchInput = $('#searchInput');
+            const searchBtn = $('#searchBtn');
+
+            function doSearch() {
+                const q = searchInput.value.trim();
+                if (!q) { searchInput.focus(); return; }
+                window.location.href = 'products.html?search=' + encodeURIComponent(q);
+            }
+            if (searchInput && searchBtn) {
+                searchBtn.addEventListener('click', doSearch);
+                searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+            }
+
+            /* ---------------- Newsletter ---------------- */
+            const newsletterForm = $('#newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', e => {
+                    e.preventDefault();
+                    const email = $('#newsletterEmail').value.trim();
+                    if (!/^\S+@\S+\.\S+$/.test(email)) {
+                        showToast('Please enter a valid email', 'fa-solid fa-triangle-exclamation');
+                        return;
+                    }
+                    try {
+                        const list = JSON.parse(localStorage.getItem('zintaxNewsletter') || '[]');
+                        if (!list.includes(email)) list.push(email);
+                        localStorage.setItem('zintaxNewsletter', JSON.stringify(list));
+                    } catch (err) { /* storage unavailable */ }
+                    newsletterForm.reset();
+                    showToast('Thanks for subscribing!');
+                });
+            }
+
+            /* ---------------- Auto sliders ---------------- */
+            function initSlider(opts) {
+                const track = $(opts.track);
+                if (!track) return;
+
+                const viewport = track.parentElement;
+                const wrapper = viewport.parentElement;
+                const prevBtn = $(opts.prev);
+                const nextBtn = $(opts.next);
+                const cards = Array.from(track.children);
+
+                let index = 0, perView = 4, gap = 20, cardW = 0, max = 0, timer = null;
+
+                function layout() {
+                    const w = window.innerWidth;
+                    perView = w > 1100 ? 4 : w > 768 ? 3 : w > 480 ? 2 : 1;
+                    gap = parseFloat(getComputedStyle(track).columnGap) || 20;
+                    cardW = (viewport.clientWidth - gap * (perView - 1)) / perView;
+                    cards.forEach(c => { c.style.width = cardW + 'px'; });
+                    max = Math.max(0, cards.length - perView);
+                    index = Math.min(index, max);
+                    if (prevBtn) prevBtn.style.visibility = max === 0 ? 'hidden' : '';
+                    if (nextBtn) nextBtn.style.visibility = max === 0 ? 'hidden' : '';
+                    move();
+                }
+
+                function move() {
+                    track.style.transform = 'translate3d(' + (-index * (cardW + gap)) + 'px,0,0)';
+                }
+
+                function next() { index = index >= max ? 0 : index + 1; move(); }
+                function prev() { index = index <= 0 ? max : index - 1; move(); }
+
+                function start() {
+                    stop();
+                    if (max === 0) return;
+                    timer = setInterval(next, opts.delay);
+                }
+                function stop() { clearInterval(timer); timer = null; }
+
+                if (nextBtn) nextBtn.addEventListener('click', () => { next(); start(); });
+                if (prevBtn) prevBtn.addEventListener('click', () => { prev(); start(); });
+
+                // pause on hover / focus
+                wrapper.addEventListener('mouseenter', stop);
+                wrapper.addEventListener('mouseleave', start);
+                wrapper.addEventListener('focusin', stop);
+                wrapper.addEventListener('focusout', start);
+
+                // touch swipe
+                let startX = 0, dx = 0, swiping = false;
+                viewport.addEventListener('touchstart', e => {
+                    startX = e.touches[0].clientX; dx = 0; swiping = true; stop();
+                }, { passive: true });
+                viewport.addEventListener('touchmove', e => {
+                    if (swiping) dx = e.touches[0].clientX - startX;
+                }, { passive: true });
+                viewport.addEventListener('touchend', () => {
+                    if (!swiping) return;
+                    swiping = false;
+                    if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
+                    start();
+                });
+
+                // pause when tab is hidden
+                document.addEventListener('visibilitychange', () => {
+                    document.hidden ? stop() : start();
+                });
+
+                let resizeTimer;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(() => { layout(); start(); }, 150);
+                });
+
+                layout();
+                start();
+            }
+
+            initSlider({ track: '#newArrivalsTrack', prev: '#newArrivalsPrev', next: '#newArrivalsNext', delay: 3500 });
+            initSlider({ track: '#sliderTrack', prev: '#sliderPrev', next: '#sliderNext', delay: 3000 });
+
+            /* ---------------- Cart ---------------- */
+            const cartBtn = $('#cartBtn');
+            const cartDrawer = $('#cartDrawer');
+            const cartOverlay = $('#cartOverlay');
+            const closeCart = $('#closeCart');
+            const cartItemsEl = $('#cartItems');
+
+            let cart = [];
+            try { cart = JSON.parse(localStorage.getItem(CART_KEY) || '[]'); } catch (e) { cart = []; }
+
+            const money = n => 'Rs. ' + Number(n).toLocaleString('en-PK');
+            const esc = s => String(s).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+
+            function saveCart() {
+                try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch (e) { /* ignore */ }
+            }
+
+            function openCart() {
+                if (!cartDrawer) return;
+                cartDrawer.classList.add('show');
+                cartOverlay && cartOverlay.classList.add('show');
+                document.body.classList.add('no-scroll');
+            }
+            function closeCartDrawer() {
+                cartDrawer && cartDrawer.classList.remove('show');
+                cartOverlay && cartOverlay.classList.remove('show');
+                document.body.classList.remove('no-scroll');
+            }
+
+            function renderCart() {
+                const count = cart.reduce((s, i) => s + i.qty, 0);
+                const total = cart.reduce((s, i) => s + i.qty * i.price, 0);
+
+                const set = (sel, txt) => { const el = $(sel); if (el) el.textContent = txt; };
+                set('#cartCount', count);
+                set('#cartHeaderCount', count);
+                set('#cartTotalSmall', money(total));
+                set('#drawerTotal', money(total));
+
+                if (!cartItemsEl) return;
+
+                if (!cart.length) {
+                    cartItemsEl.innerHTML =
+                        '<div class="empty-cart"><i class="fa-solid fa-cart-shopping"></i>' +
+                        '<h3>Your cart is empty</h3><p>Add products to your cart.</p></div>';
+                    return;
+                }
+
+                cartItemsEl.innerHTML = cart.map(item => (
+                    '<div class="cart-item" data-id="' + esc(item.id) + '">' +
+                    '<div class="cart-item-image"><img src="' + esc(item.image || '') + '" alt="' + esc(item.name) + '"></div>' +
+                    '<div class="cart-item-info">' +
+                    '<h4>' + esc(item.name) + '</h4>' +
+                    '<div class="cart-item-price">' + money(item.price) + '</div>' +
+                    '<div class="quantity">' +
+                    '<button type="button" data-act="dec" aria-label="Decrease"><i class="fa-solid fa-minus"></i></button>' +
+                    '<span>' + item.qty + '</span>' +
+                    '<button type="button" data-act="inc" aria-label="Increase"><i class="fa-solid fa-plus"></i></button>' +
+                    '</div>' +
+                    '</div>' +
+                    '<button type="button" class="remove-item" data-act="remove" aria-label="Remove"><i class="fa-solid fa-xmark"></i></button>' +
+                    '</div>'
+                )).join('');
+            }
+
+            function addToCart(product) {
+                if (!product || !product.id) return;
+                const found = cart.find(i => i.id === product.id);
+                if (found) found.qty += 1;
+                else cart.push({
+                    id: String(product.id),
+                    name: product.name || 'Product',
+                    price: Number(product.price) || 0,
+                    image: product.image || '',
+                    qty: 1
+                });
+                saveCart();
+                renderCart();
+                showToast('Product added to cart');
+            }
+            window.addToCart = addToCart;   // usable from products.html too
+
+            if (cartBtn) cartBtn.addEventListener('click', openCart);
+            if (closeCart) closeCart.addEventListener('click', closeCartDrawer);
+            if (cartOverlay) cartOverlay.addEventListener('click', closeCartDrawer);
+
+            if (cartItemsEl) {
+                cartItemsEl.addEventListener('click', e => {
+                    const btn = e.target.closest('[data-act]');
+                    if (!btn) return;
+                    const row = btn.closest('.cart-item');
+                    const item = cart.find(i => i.id === row.dataset.id);
+                    if (!item) return;
+                    const act = btn.dataset.act;
+                    if (act === 'inc') item.qty += 1;
+                    if (act === 'dec') item.qty -= 1;
+                    if (act === 'remove' || item.qty < 1) cart = cart.filter(i => i !== item);
+                    saveCart();
+                    renderCart();
+                });
+            }
+
+            // any button with class .add-cart + data attributes works (for product pages)
+            document.addEventListener('click', e => {
+                const btn = e.target.closest('.add-cart');
+                if (!btn) return;
+                addToCart({
+                    id: btn.dataset.id,
+                    name: btn.dataset.name,
+                    price: btn.dataset.price,
+                    image: btn.dataset.image
+                });
+            });
+
+            // order on WhatsApp (also used by Checkout)
+            function orderOnWhatsApp() {
+                if (!cart.length) {
+                    showToast('Your cart is empty', 'fa-solid fa-triangle-exclamation');
+                    return;
+                }
+                const lines = cart.map((i, n) => (n + 1) + '. ' + i.name + ' x ' + i.qty + ' = ' + money(i.qty * i.price));
+                const total = cart.reduce((s, i) => s + i.qty * i.price, 0);
+                const msg = 'Hello Zintax Software, I want to order:\n\n' + lines.join('\n') + '\n\nTotal: ' + money(total);
+                window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+            }
+            const whatsappOrder = $('#whatsappOrder');
+            const checkoutBtn = $('#checkoutBtn');
+            if (whatsappOrder) whatsappOrder.addEventListener('click', orderOnWhatsApp);
+            if (checkoutBtn) checkoutBtn.addEventListener('click', orderOnWhatsApp);
+
+            renderCart();
+
+            /* ---------------- Escape key closes everything ---------------- */
+            document.addEventListener('keydown', e => {
+                if (e.key !== 'Escape') return;
+                setCategoryMenu(false);
+                closeCartDrawer();
+            });
+        })();
+
+    </script>
+</body>
+
+</html>

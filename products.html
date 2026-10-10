@@ -1,0 +1,2749 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zintax Store | Products</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="products.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="main-header">
+
+    <div class="top-bar">
+        <div class="container">
+
+            <a href="tel:+923390019568">
+                <i class="fa-solid fa-phone"></i>
+                +92 339 0019568
+            </a>
+
+            <span>
+                <i class="fa-solid fa-truck"></i>
+                Free Delivery on Selected Products
+            </span>
+
+            <div class="top-links">
+                <a href="#">Login</a>
+                <a href="#">Register</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="header-main">
+
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                <img src="WhatsApp Image 2026-09-02 at 4.53.37 PM (1).jpeg"
+                     alt="Zintax Store Logo">
+            </a>
+
+            <div class="search-box">
+                <input type="search"
+                       id="productSearch"
+                       placeholder="Search POS machines, printers, scanners...">
+
+                <button type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="header-actions">
+
+                <a href="account.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Account</span>
+                </a>
+
+                <a href="wishlist.html" class="wishlist-link">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Wishlist</span>
+                    <b id="wishlistCount">0</b>
+                </a>
+
+                <a href="checkout.html" class="cart-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <b id="cartCount">0</b>
+                </a>
+
+            </div>
+
+            <button type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <div class="mobile-menu" id="mobileMenu">
+
+                <a href="index.html">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="products.html" class="active">Products</a>
+               
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
+
+
+<!-- =========================================================
+     PRODUCT LIGHTBOX
+========================================================= -->
+
+<div class="product-lightbox"
+     id="productLightbox"
+     aria-hidden="true">
+
+    <div class="lightbox-backdrop"
+         id="lightboxBackdrop"></div>
+
+    <div class="lightbox-content">
+
+        <!-- CLOSE -->
+
+        <button type="button"
+                class="lightbox-close"
+                id="lightboxClose"
+                aria-label="Close">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <!-- IMAGE -->
+
+        <div class="lightbox-image-wrap">
+
+            <img id="lightboxMainImage"
+                 src=""
+                 alt="Product Image">
+
+            <button type="button"
+                    class="lightbox-arrow lightbox-prev"
+                    id="lightboxPrev"
+                    aria-label="Previous image">
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+            </button>
+
+            <button type="button"
+                    class="lightbox-arrow lightbox-next"
+                    id="lightboxNext"
+                    aria-label="Next image">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+            <button type="button"
+                    class="zoom-btn"
+                    id="zoomImage"
+                    aria-label="Zoom image">
+
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- DETAILS -->
+
+        <div class="lightbox-details">
+
+            <span id="lightboxCategory">
+                Product
+            </span>
+
+            <h3 id="lightboxTitle">
+                Product Name
+            </h3>
+
+            <div class="lightbox-rating">
+
+                <span>★★★★★</span>
+
+                <small id="lightboxRating">
+                    4.9
+                </small>
+
+                <em id="lightboxReviews">
+                    (20)
+                </em>
+
+            </div>
+
+            <div class="lightbox-price">
+
+                <strong id="lightboxPrice">
+                    Rs. 0
+                </strong>
+
+                <del id="lightboxOldPrice">
+                    Rs. 0
+                </del>
+
+            </div>
+
+            <p id="lightboxDescription">
+                Product details will appear here.
+            </p>
+
+        </div>
+
+
+        <!-- THUMBNAILS -->
+
+        <div class="lightbox-thumbnails"
+             id="lightboxThumbnails">
+        </div>
+
+
+        <!-- COUNTER -->
+
+        <div class="lightbox-counter"
+             id="lightboxCounter">
+
+            1 / 1
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================================================
+     PRODUCTS SECTION
+========================================================= -->
+
+<main class="products-section">
+
+    <div class="container">
+
+        <div class="products-top">
+
+            <div>
+                <h2 id="productHeading">All Products</h2>
+
+                <p class="products-count">
+                    Showing
+                    <strong id="productStart">1</strong>
+                    -
+                    <strong id="productEnd">6</strong>
+                    products
+                </p>
+            </div>
+
+            <div class="product-controls">
+
+                <button type="button"
+                        class="category-open"
+                        id="categoryOpen">
+                    <i class="fa-solid fa-filter"></i>
+                    Categories
+                </button>
+
+                <select id="sortProducts">
+                    <option value="featured">Featured</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCTS LAYOUT
+        ================================================== -->
+
+        <div class="products-layout">
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
+
+            <aside class="category-sidebar" id="categorySidebar">
+
+                <button type="button"
+                        class="category-close"
+                        id="categoryClose">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+                <div class="sidebar-title">
+
+                    <h3>Categories</h3>
+
+                    <button type="button"
+                            id="categoryToggle">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="category-list">
+
+                    <button class="category-btn active"
+                            data-category="all">
+                        <span>
+                            <i class="fa-solid fa-border-all"></i>
+                            All Products
+                        </span>
+                        <b>24</b>
+                    </button>
+
+                    <button class="category-btn"
+                            data-category="pos">
+                        <span>
+                            <i class="fa-solid fa-cash-register"></i>
+                            POS Machines
+                        </span>
+                        <b>4</b>
+                    </button>
+
+                    <button class="category-btn"
+                            data-category="printer">
+                        <span>
+                            <i class="fa-solid fa-print"></i>
+                            Thermal Printers
+                        </span>
+                        <b>6</b>
+                    </button>
+
+                    <button class="category-btn"
+                            data-category="scanner">
+                        <span>
+                            <i class="fa-solid fa-barcode"></i>
+                            Barcode Scanners
+                        </span>
+                        <b>3</b>
+                    </button>
+
+                    <button class="category-btn"
+                            data-category="cash-drawer">
+                        <span>
+                            <i class="fa-solid fa-box"></i>
+                            Cash Drawers
+                        </span>
+                        <b>3</b>
+                    </button>
+
+                    <button class="category-btn"
+                            data-category="barcode-printer">
+                        <span>
+                            <i class="fa-solid fa-tags"></i>
+                            Barcode Printers
+                        </span>
+                        <b>4</b>
+                    </button>
+
+                    <button class="category-btn"
+                            data-category="scale">
+                        <span>
+                            <i class="fa-solid fa-weight-scale"></i>
+                            Weighing Scales
+                        </span>
+                        <b>2</b>
+                    </button>
+
+                    <button class="category-btn"
+                            data-category="accessories">
+                        <span>
+                            <i class="fa-solid fa-keyboard"></i>
+                            Accessories
+                        </span>
+                        <b>2</b>
+                    </button>
+
+                </div>
+
+
+                <div class="sidebar-help">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    <h4>Need Help?</h4>
+
+                    <p>
+                        Talk to our product specialist
+                    </p>
+
+                    <a href="tel:+923390019568">
+                        <i class="fa-solid fa-phone"></i>
+                        +92 339 0019568
+                    </a>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =================================================
+                 PRODUCT AREA
+            ================================================== -->
+
+            <section class="product-area">
+
+                <!-- =================================================
+                     ALL 24 PRODUCTS MUST STAY INSIDE THIS DIV
+                ================================================== -->
+
+                <div class="product-grid" id="productGrid">
+
+
+                    <!-- =================================================
+                         PRODUCT 1
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="barcode-printer"
+                             data-price="45000">
+
+                        <div class="product-images">
+
+                            <img src="bcp22.jpg"
+                                 class="product-image active"
+                                 alt="Barcode Printer"
+                                 loading="lazy">
+
+                            <img src="bcp11.jpg"
+                                 class="product-image"
+                                 alt="Barcode Printer Front"
+                                 loading="lazy">
+
+                            <img src="bcp33.jpg"
+                                 class="product-image"
+                                 alt="Barcode Printer Side"
+                                 loading="lazy">
+
+                            <img src="images/cash-drawer.jpg"
+                                 class="product-image"
+                                 alt="Barcode Printer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <span class="sale-badge">
+                                New
+                            </span>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Barcode Printer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Barcode Printer
+                            </span>
+
+                            <h3>
+                                Barcode Printer
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.9</small>
+                                <em>(12)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 45,000</strong>
+                                <del>Rs. 50,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 2
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="printer"
+                             data-price="9500">
+
+                        <div class="product-images">
+
+                            <img src="bp11.jpg"
+                                 class="product-image active"
+                                 alt="Mobile Bluetooth Printer"
+                                 loading="lazy">
+
+                            <img src="bp22.jpg"
+                                 class="product-image"
+                                 alt="Bluetooth Printer"
+                                 loading="lazy">
+
+                            <img src="bp33.jpg"
+                                 class="product-image"
+                                 alt="Mobile Printer"
+                                 loading="lazy">
+
+                            <img src="bp44.jpg"
+                                 class="product-image"
+                                 alt="Thermal Printer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Mobile Bluetooth Printer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Thermal Printer
+                            </span>
+
+                            <h3>
+                                Mobile Bluetooth Printer
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.8</small>
+                                <em>(18)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 9,500</strong>
+                                <del>Rs. 12,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 3
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="cash-drawer"
+                             data-price="9500">
+
+                        <div class="product-images">
+
+                            <img src="cd1.jpg"
+                                 class="product-image active"
+                                 alt="Automatic Cash Drawer"
+                                 loading="lazy">
+
+                            <img src="cd2.jpg"
+                                 class="product-image"
+                                 alt="Cash Drawer"
+                                 loading="lazy">
+
+                            <img src="cd3.jpg"
+                                 class="product-image"
+                                 alt="POS Cash Drawer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Automatic Cash Drawer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Cash Drawers
+                            </span>
+
+                            <h3>
+                                Automatic Cash Drawer
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.7</small>
+                                <em>(9)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 9,500</strong>
+                                <del>Rs. 11,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 4
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="pos"
+                             data-price="175500">
+
+                        <div class="product-images">
+
+                            <img src="tc1.jpg"
+                                 class="product-image active"
+                                 alt="POS Machine"
+                                 loading="lazy">
+
+                            <img src="tc2.jpg"
+                                 class="product-image"
+                                 alt="POS Machine Front"
+                                 loading="lazy">
+
+                            <img src="tc3.jpg"
+                                 class="product-image"
+                                 alt="POS Machine Side"
+                                 loading="lazy">
+
+                            <img src="tc4.jpg"
+                                 class="product-image"
+                                 alt="POS Machine Back"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <span class="sale-badge">
+                                Sale
+                            </span>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add POS Machine to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Machines
+                            </span>
+
+                            <h3>
+                                Professional POS Machine
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.9</small>
+                                <em>(25)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 175,500</strong>
+                                <del>Rs. 180,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 5
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="scale"
+                             data-price="98000">
+
+                        <div class="product-images">
+
+                            <img src="ws1.jpg"
+                                 class="product-image active"
+                                 alt="Weighing Scale"
+                                 loading="lazy">
+
+                            <img src="ws2.jpg"
+                                 class="product-image"
+                                 alt="Digital Weighing Scale"
+                                 loading="lazy">
+
+                            <img src="ws3.jpg"
+                                 class="product-image"
+                                 alt="Commercial Weighing Scale"
+                                 loading="lazy">
+
+                            <img src="ws4.jpg"
+                                 class="product-image"
+                                 alt="Weighing Scale"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <span class="sale-badge">
+                                Popular
+                            </span>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Weighing Scale to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Weighing Scale
+                            </span>
+
+                            <h3>
+                                Digital Weighing Scale
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.9</small>
+                                <em>(20)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 98,000</strong>
+                                <del>Rs. 102,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 6
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="printer"
+                             data-price="14500">
+
+                        <div class="product-images">
+
+                            <img src="tp11.jpg"
+                                 class="product-image active"
+                                 alt="High Speed Thermal Printer"
+                                 loading="lazy">
+
+                            <img src="tp22.jpg"
+                                 class="product-image"
+                                 alt="Thermal Printer"
+                                 loading="lazy">
+
+                            <img src="tp33.jpg"
+                                 class="product-image"
+                                 alt="POS Printer"
+                                 loading="lazy">
+
+                            <img src="tp44.jpg"
+                                 class="product-image"
+                                 alt="Receipt Printer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add High Speed Thermal Printer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Thermal Printer
+                            </span>
+
+                            <h3>
+                                High Speed Thermal Printer
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.8</small>
+                                <em>(15)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 14,500</strong>
+                                <del>Rs. 17,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 7
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="barcode-printer"
+                             data-price="25000">
+
+                        <div class="product-images">
+
+                            <img src="2dps11.jpg"
+                                 class="product-image active"
+                                 alt="Professional Barcode Printer"
+                                 loading="lazy">
+
+                            <img src="2dps22.jpg"
+                                 class="product-image"
+                                 alt="Barcode Printer"
+                                 loading="lazy">
+
+                            <img src="2dps33.jpg"
+                                 class="product-image"
+                                 alt="Thermal Barcode Printer"
+                                 loading="lazy">
+
+                            <img src="2dps44.jpg"
+                                 class="product-image"
+                                 alt="Retail Barcode Printer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Professional Barcode Printer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Barcode Scanners
+                            </span>
+
+                            <h3>
+                                Barcode QR Code Image 2D 1D Scanner
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.9</small>
+                                <em>(18)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 11,500</strong>
+                                <del>Rs. 12,500</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 8
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="scanner"
+                             data-price="18500">
+
+                        <div class="product-images">
+
+                            <img src="bs11.jpg"
+                                 class="product-image active"
+                                 alt="Professional 2D Barcode Scanner"
+                                 loading="lazy">
+
+                            <img src="bs22.jpg"
+                                 class="product-image"
+                                 alt="2D Barcode Scanner"
+                                 loading="lazy">
+
+                            <img src="bs33.jpg"
+                                 class="product-image"
+                                 alt="USB Barcode Scanner"
+                                 loading="lazy">
+
+                            <img src="bs44.jpg"
+                                 class="product-image"
+                                 alt="POS Barcode Scanner"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Professional 2D Barcode Scanner to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Barcode Scanners
+                            </span>
+
+                            <h3>
+                                Barcode QR Code Image 2D 1D Scanner
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.8</small>
+                                <em>(22)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 14,500</strong>
+                                <del>Rs. 15,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 9
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="cash-drawer"
+                             data-price="16500">
+
+                        <div class="product-images">
+
+                            <img src="dpbp11.jpg"
+                                 class="product-image active"
+                                 alt="Heavy Duty Cash Drawer"
+                                 loading="lazy">
+
+                            <img src="dpbp22.jpg"
+                                 class="product-image"
+                                 alt="POS Cash Drawer"
+                                 loading="lazy">
+
+                            <img src="dpbp33.jpg"
+                                 class="product-image"
+                                 alt="Retail Cash Drawer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Heavy Duty Cash Drawer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Barcode Printer
+                            </span>
+
+                            <h3>
+                                DP110U-19 Barcode Printer
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.7</small>
+                                <em>(14)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 25,500</strong>
+                                <del>Rs. 26,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 10
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="scale"
+                             data-price="98000">
+
+                        <div class="product-images">
+
+                            <img src="dptp11.jpg"
+                                 class="product-image active"
+                                 alt="Digital Weighing Scale"
+                                 loading="lazy">
+
+                            <img src="dptp22.jpg"
+                                 class="product-image"
+                                 alt="Electronic Weighing Scale"
+                                 loading="lazy">
+
+                            <img src="dptp33.jpg"
+                                 class="product-image"
+                                 alt="Shop Weighing Scale"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Digital Weighing Scale to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Thermal Printer
+                            </span>
+
+                            <h3>
+                                Thermal Printer
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.9</small>
+                                <em>(27)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 10,000</strong>
+                                <del>Rs. 11,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 11
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="printer"
+                             data-price="42000">
+
+                        <div class="product-images">
+
+                            <img src="llbs11.jpg"
+                                 class="product-image active"
+                                 alt="Thermal Receipt Printer"
+                                 loading="lazy">
+
+                            <img src="llbs22.jpg"
+                                 class="product-image"
+                                 alt="High Speed Receipt Printer"
+                                 loading="lazy">
+
+                            <img src="llbs33.jpg"
+                                 class="product-image"
+                                 alt="POS Receipt Printer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Thermal Receipt Printer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Barcode Scanners
+                            </span>
+
+                            <h3>
+                                Single Line Laser Barcode Scanner With Stand
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.8</small>
+                                <em>(19)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 7,200</strong>
+                                <del>Rs. 8,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 12
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="accessories"
+                             data-price="7500">
+
+                        <div class="product-images">
+
+                            <img src="2100.jpg"
+                                 class="product-image active"
+                                 alt="POS Accessories"
+                                 loading="lazy">
+
+                            <img src="21000.jpg"
+                                 class="product-image"
+                                 alt="POS Accessories Kit"
+                                 loading="lazy">
+
+                            <img src="210000.jpg"
+                                 class="product-image"
+                                 alt="POS Equipment Accessories"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add POS Accessories to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Barcode Scanners
+                            </span>
+
+                            <h3>
+                                Wireless and Wired Image Barcode 2D Code Scanner WO-Stand
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.6</small>
+                                <em>(11)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 8,850</strong>
+                                <del>Rs. 9,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 13
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="pos"
+                             data-price="175500">
+
+                        <div class="product-images">
+
+                            <img src="slbs11.jpg"
+                                 class="product-image active"
+                                 alt="Professional POS Machine"
+                                 loading="lazy">
+
+                            <img src="slbs22.jpg"
+                                 class="product-image"
+                                 alt="POS Machine"
+                                 loading="lazy">
+
+                            <img src="slbs33.jpg"
+                                 class="product-image"
+                                 alt="Touch Screen POS Machine"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Professional POS Machine to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                Barcode Scanners
+                            </span>
+
+                            <h3>
+                                Single Line Laser Barcode Scanner WO Stand
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.9</small>
+                                <em>(31)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 5,500</strong>
+                                <del>Rs. 6,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 14
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="pos"
+                             data-price="145000">
+
+                        <div class="product-images">
+
+                            <img src="lc11.webp"
+                                 class="product-image active"
+                                 alt="POS Billing Machine"
+                                 loading="lazy">
+
+                            <img src="lc22.webp"
+                                 class="product-image"
+                                 alt="POS Billing System"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add POS Billing Machine to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Accessories
+                            </span>
+
+                            <h3>
+                                LAN Cable 3 Mtr
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.8</small>
+                                <em>(24)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 1200</strong>
+                                <del>Rs. 1300</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 15
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="pos"
+                             data-price="155000">
+
+                        <div class="product-images">
+
+                            <img src="tp1.jpg"
+                                 class="product-image active"
+                                 alt="Android POS Machine"
+                                 loading="lazy">
+
+                            <img src="tp2.jpg"
+                                 class="product-image"
+                                 alt="Android POS System"
+                                 loading="lazy">
+
+                            <img src="th3.jpg"
+                                 class="product-image"
+                                 alt="Touch POS Machine"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Android POS Machine to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Accessories
+                            </span>
+
+                            <h3>
+                                60 Meter Paper Roll
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.9</small>
+                                <em>(28)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 250</strong>
+                                <del>Rs. 300</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 16
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="printer"
+                             data-price="22500">
+
+                        <div class="product-images">
+
+                            <img src="tp1.jpg"
+                                 class="product-image active"
+                                 alt="58mm Thermal Printer"
+                                 loading="lazy">
+
+                            <img src="tp2.jpg"
+                                 class="product-image"
+                                 alt="58mm Receipt Printer"
+                                 loading="lazy">
+
+                            <img src="th3.jpg"
+                                 class="product-image"
+                                 alt="Mini Thermal Printer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add 58mm Thermal Printer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                80 Meter Paper Roll
+                            </span>
+
+                            <h3>
+                                80 Meter Paper Roll
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.7</small>
+                                <em>(17)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 299</strong>
+                                <del>Rs. 350</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 17
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="scanner"
+                             data-price="12500">
+
+                        <div class="product-images">
+
+                            <img src="bl11.webp"
+                                 class="product-image active"
+                                 alt="USB Barcode Scanner"
+                                 loading="lazy">
+
+                            <img src="bl22.webp"
+                                 class="product-image"
+                                 alt="Handheld Barcode Scanner"
+                                 loading="lazy">
+
+                            <img src="bl33.webp"
+                                 class="product-image"
+                                 alt="Retail Barcode Scanner"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add USB Barcode Scanner to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Accessories
+                            </span>
+
+                            <h3>
+                                Barcode Sticker 1000 Pcs
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.7</small>
+                                <em>(13)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 280</strong>
+                                <del>Rs. 320</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 18
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="accessories"
+                             data-price="9500">
+
+                        <div class="product-images">
+
+                            <img src="br11.webp"
+                                 class="product-image active"
+                                 alt="POS Accessories Kit"
+                                 loading="lazy">
+
+                            <img src="br22.webp"
+                                 class="product-image"
+                                 alt="POS Equipment Accessories"
+                                 loading="lazy">
+
+                            <img src="br33.webp"
+                                 class="product-image"
+                                 alt="POS Accessories"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add POS Accessories Kit to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Accessories
+                            </span>
+
+                            <h3>
+                                Barcode Ribbon 300 Mtr
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.6</small>
+                                <em>(12)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 620</strong>
+                                <del>Rs. 680</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 19
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="printer"
+                             data-price="19500">
+
+                        <div class="product-images">
+
+                            <img src="cp11.jpg"
+                                 class="product-image active"
+                                 alt="80mm Thermal Printer"
+                                 loading="lazy">
+
+                            <img src="cm70g.webp"
+                                 class="product-image"
+                                 alt="80mm Receipt Printer"
+                                 loading="lazy">
+
+                            <img src="cp22"
+                                 class="product-image"
+                                 alt="POS Thermal Printer"
+                                 loading="lazy">
+
+                            <img src="printer19-4.jpg"
+                                 class="product-image"
+                                 alt="Retail Receipt Printer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add 80mm Thermal Printer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Accessories
+                            </span>
+
+                            <h3>
+                                CopyMate Paper 70GSM
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.8</small>
+                                <em>(21)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 950</strong>
+                                <del>Rs. 1000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 20
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="barcode-printer"
+                             data-price="28500">
+
+                        <div class="product-images">
+
+                            <img src="cm80g.jpg"
+                                 class="product-image active"
+                                 alt="Desktop Barcode Printer"
+                                 loading="lazy">
+
+                            <img src="barcode20-2.jpg"
+                                 class="product-image"
+                                 alt="Desktop Label Printer"
+                                 loading="lazy">
+
+                            <img src="barcode20-3.jpg"
+                                 class="product-image"
+                                 alt="Barcode Label Printer"
+                                 loading="lazy">
+
+                            <img src="barcode20-4.jpg"
+                                 class="product-image"
+                                 alt="Professional Label Printer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Desktop Barcode Printer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Accessories
+                            </span>
+
+                            <h3>
+                                CopyMate Paper 80GSM
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.9</small>
+                                <em>(16)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 1450</strong>
+                                <del>Rs. 1500</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 21
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="scanner"
+                             data-price="15500">
+
+                        <div class="product-images">
+
+                            <img src="hvc11.jpg"
+                                 class="product-image active"
+                                 alt="Wireless Barcode Scanner"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Wireless Barcode Scanner to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Accessories
+                            </span>
+
+                            <h3>
+                                CCTV Camera Pakage
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.8</small>
+                                <em>(20)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 65,500</strong>
+                                <del>Rs. 68,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 22
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="cash-drawer"
+                             data-price="18500">
+
+                        <div class="product-images">
+
+                            <img src="am11.webp"
+                                 class="product-image active"
+                                 alt="Electronic Cash Drawer"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Electronic Cash Drawer to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Accessories
+                            </span>
+
+                            <h3>
+                                Attendance Machine
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.7</small>
+                                <em>(15)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 36,500</strong>
+                                <del>Rs. 40,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 23
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="scale"
+                             data-price="68000">
+
+                        <div class="product-images">
+
+                            <img src="bm11.webp"
+                                 class="product-image active"
+                                 alt="Commercial Weighing Scale"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add Commercial Weighing Scale to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Accessories
+                            </span>
+
+                            <h3>
+                                Fingerprint Assess Control
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.9</small>
+                                <em>(23)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 28,000</strong>
+                                <del>Rs. 29,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRODUCT 24
+                    ================================================== -->
+
+                    <article class="product-card"
+                             data-category="accessories"
+                             data-price="11500">
+
+                        <div class="product-images">
+
+                            <img src="ncm.webp"
+                                 class="product-image active"
+                                 alt="POS Accessories Kit"
+                                 loading="lazy">
+
+                            <button type="button"
+                                    class="image-arrow prev"
+                                    aria-label="Previous product image">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="image-arrow next"
+                                    aria-label="Next product image">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <button type="button"
+                                    class="wishlist-btn"
+                                    aria-label="Add POS Accessories Kit to wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="image-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="category">
+                                POS Accessories
+                            </span>
+
+                            <h3>
+                                cash Count Machine
+                            </h3>
+
+                            <div class="rating">
+                                <span>★★★★★</span>
+                                <small>4.7</small>
+                                <em>(18)</em>
+                            </div>
+
+                            <div class="price">
+                                <strong>Rs. 35,500</strong>
+                                <del>Rs. 37,000</del>
+                            </div>
+
+                            <button type="button" class="add-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+                <!-- END PRODUCT GRID -->
+
+
+                <!-- =================================================
+                     PAGINATION
+                     ONLY ONE PAGINATION
+                ================================================== -->
+
+                <div class="pagination" id="pagination">
+
+                    <button type="button"
+                            class="page-btn prev-page"
+                            id="prevPage"
+                            disabled>
+
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Previous
+
+                    </button>
+
+
+                    <div class="page-numbers">
+
+                        <button type="button"
+                                class="page-number active"
+                                data-page="1">
+                            1
+                        </button>
+
+                        <button type="button"
+                                class="page-number"
+                                data-page="2">
+                            2
+                        </button>
+
+                        <button type="button"
+                                class="page-number"
+                                data-page="3">
+                            3
+                        </button>
+
+                        <button type="button"
+                                class="page-number"
+                                data-page="4">
+                            4
+                        </button>
+
+                    </div>
+
+
+                    <button type="button"
+                            class="page-btn next-page"
+                            id="nextPage">
+
+                        Next
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     NO PRODUCTS
+                ================================================== -->
+
+                <div class="no-products"
+                     id="noProducts"
+                     style="display:none;">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    <h3>
+                        No Products Found
+                    </h3>
+
+                    <p>
+                        Sorry, no products match your search.
+                    </p>
+
+                    <button type="button"
+                            id="resetProducts">
+                        Show All Products
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer
+    class="footer"
+    id="contact">
+
+
+<div class="container footer-grid">
+
+
+    <!-- ABOUT -->
+
+    <div class="footer-about">
+
+        <a
+            href="index.html"
+            class="footer-logo">
+
+            <img
+                src="WhatsApp Image 2026-09-02 at 4.53.37 PM (1).jpeg"
+                alt="Zintax Software">
+
+        </a>
+
+
+        <p>
+            Zintax Software is your technology partner
+            for POS systems, hardware, software and
+            digital business solutions.
+        </p>
+
+
+        <div class="social">
+
+            <a
+                href="https://www.facebook.com/profile.php?id=61590912303466"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <a
+                href="https://www.instagram.com/zintaxsoftware/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <a
+                href="#"
+                aria-label="LinkedIn">
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+
+            <a
+                href="https://wa.me/923390019568"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK LINKS -->
+
+    <div>
+
+        <h3>
+            Quick Links
+        </h3>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="product.html">
+            Shop
+        </a>
+
+        <a href="#categories">
+            Categories
+        </a>
+
+        <a href="#about">
+            About Us
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </div>
+
+
+    <!-- CATEGORIES -->
+
+    <div>
+
+        <h3>
+            Categories
+        </h3>
+
+        <a href="products.html">
+            POS Systems
+        </a>
+
+        <a href="products.html">
+            Thermal Printers
+        </a>
+
+        <a href="products.html">
+            Barcode Scanners
+        </a>
+
+        <a href="products.html">
+            Cash Drawers
+        </a>
+
+        <a href="products.html">
+            Accessories
+        </a>
+
+    </div>
+
+
+    <!-- CONTACT -->
+
+    <div>
+
+        <h3>
+            Contact Us
+        </h3>
+
+
+        <p class="footer-contact">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            Punjab Tower, 2nd Floor,
+            Office No. 2, Near MCB Bank,
+            Gohad Pur Rd, Sialkot, Pakistan
+
+        </p>
+
+
+        <p class="footer-contact">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <a href="tel:+923390019568">
+                +92 339 0019568
+            </a>
+
+        </p>
+
+
+        <p class="footer-contact">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <a href="mailto:zintaxsoftwarehouse@gmail.com">
+                zintaxsoftwarehouse@gmail.com
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+    <div class="container">
+
+        <p>
+            © 2026 Zintax Software House.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</div>
+
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="products.js"></script>
+<script src="cart.js"></script>
+
+</body>
+</html>
